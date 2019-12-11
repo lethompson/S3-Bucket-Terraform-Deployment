@@ -1,6 +1,29 @@
-# S3-Bucket-Terraform-Deployment Code
-s3.tf 
+# Installation steps for Terraform on Linux Ubuntu
+#### Download the terraform version from HashiCorp
+```
+> sudo wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip
+```
+#### Install unzip if you don't have unzip command 
+```
+> sudo apt-get install -y unzip
+```
+#### Unzip the file and include the terraform file in your local bin directory in Linux
+```
+> sudo unzip terraform_0.11.14_linux_amd64.zip -d /usr/local/bin/
+```
+#### To check if terraform is installed and what version of terraform you have
+```
+> which terraform
+> terraform --version
+```
 
+# S3-Bucket-Terraform-Deployment Code
+## Create a file called s3.tf using vim or text editor
+```
+> vim s3.tf 
+```
+
+## Provide the following code in the s3.tf file and save it
 ```
 provider "aws" {
   region = "us-east-1"
