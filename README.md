@@ -1,6 +1,24 @@
 # S3-Bucket-Terraform-Deployment Code
 s3.tf 
 
+```
+provider "aws" {
+  region = "us-east-1"
+  access_key = "<ACCESS KEY>"
+  secret_key = "<SECRET KEY>"
+}
+
+
+resource "aws_s3_bucket" "b" {
+  bucket = "test-example-s3-terraform-lt"
+  acl    = "private"
+
+  tags {
+    Name	= "My bucket Demo - Terraform Deployment"
+    Environment = "Dev-Env"
+  }
+}
+```
 
 ### Terraform Deployment Setups:
 #### The terraform init command is used to initialize a working directory containing Terraform configuration files
